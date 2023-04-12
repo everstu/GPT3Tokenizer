@@ -1,5 +1,5 @@
 {
-  "name": "gioni06/gpt3-tokenizer",
+  "name": "everstu/gpt3-tokenizer",
   "description": "PHP package for Byte Pair Encoding (BPE) used by GPT-3.",
   "keywords": ["gpt-3", "openai", "gpt-2", "tokenizer", "encode", "decode"],
   "license": "Apache-2.0",
@@ -14,7 +14,7 @@
   "authors": [
     {
       "name": "everstu",
-      "email": "everstu@everstu.com"
+      "email": "whtony2003@gmail.com"
     },
     {
       "name": "Jonas Duri",
@@ -36,7 +36,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-        "Gioni06\\Gpt3Tokenizer\\Tests\\": "tests/"
+        "everstu\\Gpt3Tokenizer\\Tests\\": "tests/"
     }
   }
 }

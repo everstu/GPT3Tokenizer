@@ -1,5 +1,8 @@
 # GPT3Tokenizer for PHP
 
+### This package is forked from https://packagist.org/packages/gioni06/gpt3-tokenizer and changed to support php 7, thanks to the original author!
+
+
 This is a PHP port of the GPT-3 tokenizer. It is based on the [original Python implementation](https://huggingface.co/docs/transformers/model_doc/gpt2#transformers.GPT2Tokenizer) and the [Nodejs implementation](https://github.com/latitudegames/GPT-3-Encoder).
 
 GPT-2 and GPT-3 use a technique called byte pair encoding to convert text into a sequence of integers, which are then used as input for the model.
@@ -14,10 +17,10 @@ It only takes a second and it would mean a lot to me. Your star will not only ma
 
 
 ## Installation
-Install the package from [Packagist](https://packagist.org/packages/gioni06/gpt3-tokenizer) using Composer:
+Install the package from [Packagist](https://packagist.org/packages/everstu/gpt3-tokenizer) using Composer:
 
 ```bash
-composer require gioni06/gpt3-tokenizer
+composer require everstu/gpt3-tokenizer
 ```
 
 ## Testing
@@ -30,7 +33,7 @@ https://stackoverflow.com/questions/46448294/phpunit-coverage-allowed-memory-siz
 ## Use the configuration Class
 
 ```php
-use Gioni06\Gpt3Tokenizer\Gpt3TokenizerConfig;
+use everstu\Gpt3Tokenizer\Gpt3TokenizerConfig;
 
 // default vocab path
 // default merges path
@@ -51,8 +54,8 @@ You will see slightly better performance for long texts when using the cache. Th
 ## Encode a text
 
 ```php
-use Gioni06\Gpt3Tokenizer\Gpt3TokenizerConfig;
-use Gioni06\Gpt3Tokenizer\Gpt3Tokenizer;
+use everstu\Gpt3Tokenizer\Gpt3TokenizerConfig;
+use everstu\Gpt3Tokenizer\Gpt3Tokenizer;
 
 $config = new Gpt3TokenizerConfig();
 $tokenizer = new Gpt3Tokenizer($config);
@@ -64,8 +67,8 @@ $tokens = $tokenizer->encode($text);
 ## Decode a text
 
 ```php
-use Gioni06\Gpt3Tokenizer\Gpt3TokenizerConfig;
-use Gioni06\Gpt3Tokenizer\Gpt3Tokenizer;
+use everstu\Gpt3Tokenizer\Gpt3TokenizerConfig;
+use everstu\Gpt3Tokenizer\Gpt3Tokenizer;
 
 $config = new Gpt3TokenizerConfig();
 $tokenizer = new Gpt3Tokenizer($config);
@@ -77,8 +80,8 @@ $text = $tokenizer->decode($tokens);
 ## Count the number of tokens in a text
 
 ```php
-use Gioni06\Gpt3Tokenizer\Gpt3TokenizerConfig;
-use Gioni06\Gpt3Tokenizer\Gpt3Tokenizer;
+use everstu\Gpt3Tokenizer\Gpt3TokenizerConfig;
+use everstu\Gpt3Tokenizer\Gpt3Tokenizer;
 
 $config = new Gpt3TokenizerConfig();
 $tokenizer = new Gpt3Tokenizer($config);

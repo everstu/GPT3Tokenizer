@@ -1,6 +1,6 @@
 <?php
 
-namespace Gioni06\Gpt3Tokenizer;
+namespace everstu\Gpt3Tokenizer;
 
 use Exception;
 
