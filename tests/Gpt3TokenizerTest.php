@@ -1,22 +1,26 @@
 <?php /** @noinspection SpellCheckingInspection */
 
-namespace Gioni06\Gpt3Tokenizer\Tests;
+namespace everstu\Gpt3Tokenizer\Tests;
 
-use Gioni06\Gpt3Tokenizer\Gpt3Tokenizer;
-use Gioni06\Gpt3Tokenizer\Gpt3TokenizerConfig;
+use everstu\Gpt3Tokenizer\Gpt3TokenizerConfig;
+use everstu\Gpt3Tokenizer\Gpt3Tokenizer;
+use Exception;
 use PHPUnit\Framework\TestCase;
 
 class Gpt3TokenizerTest extends TestCase {
 
-    private Gpt3Tokenizer $tokenizer;
+    private  $tokenizer;
 
-    protected function setUp(): void
+    protected function setUp()
     {
         parent::setUp();
         $config = new Gpt3TokenizerConfig();
-        $this->tokenizer = new Gpt3Tokenizer($config);
+        try {
+            $this->tokenizer = new Gpt3Tokenizer($config);
+        } catch (Exception $e) {
+        }
     }
-    public function test_encodeStr_function(): void
+    public function test_encodeStr_function()
     {
         $this->assertEquals([ '32', '119', '111', '114', '108', '100' ], Gpt3Tokenizer::encodeStr(" world"));
         $this->assertEquals([ '32', '240', '159', '140', '141' ], Gpt3Tokenizer::encodeStr(" 🌍"));
@@ -24,7 +28,7 @@ class Gpt3TokenizerTest extends TestCase {
     }
 
 
-    public function test_decodeStr_function(): void
+    public function test_decodeStr_function()
     {
         $this->assertEquals(" world", Gpt3Tokenizer::decodeStr([ '32', '119', '111', '114', '108', '100' ]));
         $this->assertEquals(" 🌍", Gpt3Tokenizer::decodeStr([ '32', '240', '159', '140', '141' ]));

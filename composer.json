@@ -31,7 +31,7 @@
   },
   "autoload": {
     "psr-4": {
-        "Gioni06\\Gpt3Tokenizer\\": "src/"
+        "everstu\\Gpt3Tokenizer\\": "src/"
     }
   },
   "autoload-dev": {
